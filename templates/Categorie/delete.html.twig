@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Modification de la catégorie "{{ categorie.Libelle }}"</h1>
+    <form method="post">
+        <input type="text" name="Libelle" value="{{ categorie.Libelle }}">
+        <textarea name="Libelle">
+            {{ categorie.Libelle }}
+        </textarea>
+        <input type="text" name="Icone" value="{{ categorie.Icone }}">
+        <textarea name="Icone">
+            {{ categorie.Icone }}
+        </textarea>
+        <select name="Categorie">
+            {% if categorie.Libelle == "BD" %}
+                <option selected>BD</option>
+            {% else %}
+                <option >BD</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Romans" %}
+                <option selected>Romans</option>
+            {% else %}
+                <option >Romans</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Mangas" %}
+                <option selected>Mangas</option>
+            {% else %}
+                <option >Mangas</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Dictionnaires" %}
+                <option selected>Dictionnaires</option>
+            {% else %}
+                <option >Dictionnaires</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Périodiques" %}
+                <option selected>Périodiques</option>
+            {% else %}
+                <option >Périodiques</option>
+            {% endif %}
+
+        </select>
+        <input type="submit" value="Enregistrer les modifications">
+    </form>
+
+{% endblock %}

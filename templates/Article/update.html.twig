@@ -40,6 +40,39 @@
             {% endif %}
 
         </select>
+
+        <select name="Libelle">
+            {% if categorie.Libelle == "BD" %}
+                <option selected>BD</option>
+            {% else %}
+                <option >BD</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Romans" %}
+                <option selected>Romans</option>
+            {% else %}
+                <option >Romans</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Mangas" %}
+                <option selected>Mangas</option>
+            {% else %}
+                <option >Mangas</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Dictionnaires" %}
+                <option selected>Dictionnaires</option>
+            {% else %}
+                <option >Dictionnaires</option>
+            {% endif %}
+
+            {% if categorie.Libelle == "Périodiques" %}
+                <option selected>Périodiques</option>
+            {% else %}
+                <option >Périodiques</option>
+            {% endif %}
+
+        </select>
         <input type="submit" value="Enregistrer les modifications">
     </form>
 
